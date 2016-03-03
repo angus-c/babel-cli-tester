@@ -4,8 +4,9 @@
   "description": "test babel-cli",
   "author": "Angus Croll",
   "scripts": {
-    "compile": "babel src --out-dir lib",
-    "prepublish": "npm run compile",
+    "compile": "babel src --out-dir dist",
+    "compile-watch": "babel src -o bundle.js -s -w",
+    "prepublish": "npm run compile"
   },
   "license": "MIT",
   "repository": {
@@ -20,9 +21,10 @@
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
-    "babel-eslint": "^4.1.8",
-    "babel-loader": "^6.2.2",
     "babel-preset-es2015": "^6.5.0",
-    "babel-preset-react": "^6.5.0",
+    "babel-preset-react": "^6.5.0"
+  },
+  "dependencies": {
+    "add": "^2.0.6"
   }
 }
